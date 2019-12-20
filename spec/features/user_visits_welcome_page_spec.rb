@@ -22,6 +22,9 @@ describe 'user can visit the welcome page' do
       expect(page).to have_css('#address')
       expect(page).to have_css('#fuel-type')
       expect(page).to have_css('#access-times')
+      expect(page).to have_css('#distance')
+      expect(page).to have_css('#travel-time')
+      expect(page).to have_css('#directions')
     end
   end
 end
