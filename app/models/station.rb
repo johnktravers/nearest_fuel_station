@@ -9,7 +9,7 @@ class Station
 
   def initialize(location)
     attrs = station_data(location)
-    @name = attrs[:name]
+    @name = attrs[:station_name]
     @address = "#{attrs[:street_address]}, #{attrs[:city]}, #{attrs[:state]} #{attrs[:zip]}"
     @fuel_type = attrs[:fuel_type_code]
     @access_times = attrs[:access_days_time]
