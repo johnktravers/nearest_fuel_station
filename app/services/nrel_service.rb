@@ -5,7 +5,7 @@ class NRELService
       req.params['fuel_type'] = 'ELEC'
     end
 
-    station_data = JSON.parse(response.body, symbolize_names: true)[:fuel_stations].first
+    JSON.parse(response.body, symbolize_names: true)[:fuel_stations].first
   end
 
 
