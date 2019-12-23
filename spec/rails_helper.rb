@@ -63,6 +63,8 @@ RSpec.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/cassettes'
+  config.cassette_library_dir = 'spec/fixtures/cassettes'
   config.hook_into :webmock
+  config.filter_sensitive_data('<NREL_API_KEY>') { ENV['NREL_API_KEY'] }
+  config.filter_sensitive_data('<GOOGLE_MAPS_API_KEY>') { ENV['GOOGLE_MAPS_API_KEY'] }
 end
